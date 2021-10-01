@@ -135,6 +135,7 @@ function draw() {
 
   if(gameState === "END"){
     bricks.visible = false;
+    bricks.removeSprite();
     gameOver.visible = true;
   }
 
@@ -176,7 +177,7 @@ function keyPressed(){
     ball.scale = 0.1;
     ball.maxSpeed = MAX_SPEED;
 
-    bricks.length=0;
+    //bricks.length=0;
 
     var offsetX = width/2-(COLUMNS-1)*(BRICK_MARGIN+BRICK_W)/2;
     var offsetY = 92;
